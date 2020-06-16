@@ -33,7 +33,7 @@ def getPrimenumberstate(end, start = 2): #0 and 1 aren't primenumbers, primebumb
 def getRandomPrimenumber(end = 1024, start = 2):
     primenumbers = getPrimenumbers(end, start)
     if primenumbers == []:
-        raise f"getRandomPrimenumbers(end = {end}, start = {start}) >>> No Primenumbers Found!"
+        raise BaseException(f"getRandomPrimenumbers(end = {end}, start = {start}) >>> No Primenumbers Found!")
     else:
         randPrime = random.choice(primenumbers)
         return randPrime
